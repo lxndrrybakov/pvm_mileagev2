@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.machine-card {
+  @apply p-6 rounded-lg shadow-lg transition-all duration-200 bg-green-100;
+}
+
+.machine-card:hover {
+  @apply transform scale-105;
+}
+
+.warning-pvm {
+  @apply bg-orange-100;
+  animation: warning-pulse 1s ease-in-out infinite;
+}
+
+.critical-pvm {
+  @apply bg-red-100;
+  animation: critical-pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes warning-pulse {
+  0% { background-color: #fed7aa; }
+  50% { background-color: #ffedd5; }
+  100% { background-color: #fed7aa; }
+}
+
+@keyframes critical-pulse {
+  0% { background-color: #fecaca; }
+  50% { background-color: #fee2e2; }
+  100% { background-color: #fecaca; }
+}
